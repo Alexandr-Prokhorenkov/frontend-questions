@@ -1,0 +1,30 @@
+.container {
+  padding: 16px;
+  width: 712px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.titleContainer {
+  display: flex;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.text {
+  text-align: left;
+}
+
+.text strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.text span {
+  font-size: 14px;
+  font-weight: 400;
+}

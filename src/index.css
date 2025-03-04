@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'LT Superior';
+  src: url('/src/assets/fonts/LTSuperior-Regular.otf') format('otf'),
+       url('/src/assets/fonts/LTSuperior-Semibold.otf') format('otf'),
+       url('/src/assets/fonts/LTSuperior-Medium.otf') format('otf'),
+       url('/src/assets/fonts/LTSuperior-Bold.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'LT Superior', sans-serif;
+  color: #131313;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
