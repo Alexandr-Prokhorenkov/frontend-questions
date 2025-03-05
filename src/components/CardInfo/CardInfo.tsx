@@ -10,6 +10,11 @@ type CardInfoProps = {
   longAnswer: string;
   frequency?: number;
   codeExample?: string;
+  language?: string
+};
+
+const fixPrepositions = (text: string) => {
+  return text.replace(/\s(в|Чем|на|с|к|о|и|у|по|как|за|из|от|до|об|под|при|без|для|через|над|Не|их|про|между)\s/g, " $1\u00A0");
 };
 
 export const CardInfo: FC<CardInfoProps> = ({
@@ -17,6 +22,7 @@ export const CardInfo: FC<CardInfoProps> = ({
   title,
   longAnswer,
   codeExample,
+  language,
 }) => {
   return (
     <div className={styles.container}>
@@ -29,13 +35,13 @@ export const CardInfo: FC<CardInfoProps> = ({
         <p
           className={styles.text}
           dangerouslySetInnerHTML={{
-            __html: longAnswer,
+            __html: fixPrepositions(longAnswer),
           }}
         />
       </div>
       {codeExample && (
         <SyntaxHighlighter
-          language="html"
+          language={language}
           style={dracula}
           showLineNumbers
           wrapLongLines

@@ -12,6 +12,7 @@ function App() {
           title={cardItem.title}
           longAnswer={cardItem.longAnswer}
           codeExample={cardItem.codeExample}
+          language={cardItem.language}
         />
       ))}
     </div>
