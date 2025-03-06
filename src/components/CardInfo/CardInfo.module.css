@@ -17,6 +17,7 @@
 
 .text {
   text-align: left;
+  white-space: pre-line;
 }
 
 .text strong {

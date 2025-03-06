@@ -14,7 +14,7 @@ type CardInfoProps = {
 };
 
 const fixPrepositions = (text: string) => {
-  return text.replace(/\s(в|Чем|на|с|к|о|и|у|по|как|за|из|от|до|об|под|при|без|для|через|над|Не|их|про|между)\s/g, " $1\u00A0");
+  return text.replace(/\s(в|Чем|на|с|к|о|и|у|по|как|за|из|от|до|об|под|при|без|для|через|над|Не|их|Это|с|про|между)\s/g, " $1\u00A0");
 };
 
 export const CardInfo: FC<CardInfoProps> = ({
