@@ -1,11 +1,11 @@
 import "./App.css";
 import { CardInfo } from "./components/CardInfo/CardInfo";
-import { JAVASCRIPT_QUESTIONS } from "./shared/constants";
+import { BROWSER_NETWORKS } from "./shared/constants";
 
 function App() {
   return (
     <div className="container">
-      {JAVASCRIPT_QUESTIONS.map((cardItem) => (
+      {BROWSER_NETWORKS.map((cardItem) => (
         <CardInfo 
           key={cardItem.number}
           number={cardItem.number}
