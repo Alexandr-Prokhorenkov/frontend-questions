@@ -1,11 +1,11 @@
 import "./App.css";
 import { CardInfo } from "./components/CardInfo/CardInfo";
-import { BROWSER_NETWORKS } from "./shared/constants";
+import { ARCHITECTURE } from "./shared/constants";
 
 function App() {
   return (
     <div className="container">
-      {BROWSER_NETWORKS.map((cardItem) => (
+      {ARCHITECTURE.map((cardItem) => (
         <CardInfo 
           key={cardItem.number}
           number={cardItem.number}
