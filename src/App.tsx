@@ -1,11 +1,11 @@
 import "./App.css";
 import { CardInfo } from "./components/CardInfo/CardInfo";
-import { ARCHITECTURE } from "./shared/constants";
+import { TYPESCRIPT_QUESTIONS } from "./shared/constants";
 
 function App() {
   return (
     <div className="container">
-      {ARCHITECTURE.map((cardItem) => (
+      {TYPESCRIPT_QUESTIONS.map((cardItem) => (
         <CardInfo 
           key={cardItem.number}
           number={cardItem.number}

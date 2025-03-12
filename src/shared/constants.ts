@@ -1942,5 +1942,217 @@ const observer2 = new Observer("Observer 2");`
       frequency: 4,
       language: "javascript",
     },
-
 ]
+
+export const TYPESCRIPT_QUESTIONS = [
+  {
+    number: 1,
+    title: `Что такое TypeScript и в чем его основные преимущества перед JavaScript?`,
+    shortAnswer: '',
+    longAnswer: `<strong>TypeScript</strong><span>— это строго типизированное надмножество JavaScript, разработанное Microsoft. TypeScript добавляет к JavaScript статическую типизацию и некоторые возможности, которые упрощают разработку сложных приложений и улучшают читаемость и поддержку кода. TypeScript компилируется в JavaScript, поэтому его можно использовать в любом проекте, где поддерживается JavaScript, включая браузеры и серверную среду.</span><br>
+    <strong>Основные преимущества TypeScript перед JavaScript:</strong><br>
+    <span>1. Статическая типизация</span><br>
+    <span>2. Автодополнение и рефакторинг</span><br>
+    <span>3. Интерфейсы и типы</span><br>
+    <span>4. Поддержка новых возможностей JavaScript</span><br>
+    <span>5. Инструменты для работы с крупными проектами</span><br> 
+    <span>6. Поддержка ООП (объектно-ориентированного программирования)</span><br>
+    <span>7. Интеграция с популярными библиотеками и фреймворками</span>`,
+    frequency: 4,
+    language: "html",
+  },
+  {
+    number: 2,
+    title: `Какие основные типы данных существуют в TypeScript?`,
+    shortAnswer: '',
+    longAnswer: `<span><b>TypeScript</b> поддерживает основные типы данных, аналогичные JavaScript, а также добавляет дополнительные типы и механизмы, позволяющие лучше управлять структурой данных и снижать вероятность ошибок. Вот основные типы данных в TypeScript:</span><br>
+    <span>1. <b>number</b> — Числовой тип. Поддерживает целые числа и числа с плавающей запятой.</span><br>
+    <span>2. <b>string</b> — Строковый тип. Для строковых значений</span><br>
+    <span>3. <b>boolean</b> — Логический тип. Может принимать значения true или false</span><br>
+    <span>4. <b>array</b> — Массив. Определяется как type[] или Array<type></span><br>
+    <span>5. <b>tuple</b> — Кортеж. Позволяет задать массив с фиксированным количеством элементов и разными типами</span><br> 
+    <span>6. <b>enum</b> — Перечисление. Определяет набор именованных значений</span><br>
+    <span>7. <b>any</b> — Произвольный тип. Отключает проверку типов. Используется, когда тип данных неизвестен на этапе написания кода</span><br>
+    <span>8. <b>void</b> — Отсутствие значения. Обычно используется как возвращаемый тип функций, которые ничего не возвращают.</span><br> 
+    <span>9. <b>null</b> и undefined — Специальные типы. Используются для значений null и undefined</span><br>
+    <span>10. <b>never</b> — Тип, представляющий значения, которые никогда не возникают. Используется для функций, которые всегда выбрасывают ошибку или никогда не возвращают значение.</span><br>
+    <span>11. <b>object</b> — Объектный тип. Представляет любой тип, который не является примитивным</span><br>
+    <span>12. <b>unknown</b> — Тип для значений с неизвестным типом. Безопаснее, чем any, так как требует проверки типа перед использованием.</span><br>
+    <span>13. <b>symbol</b> — Уникальный и неизменяемый тип, добавленный в ES6. Используется для создания уникальных идентификаторов.</span><br>`,
+    frequency: 4,
+    language: "html",
+  },
+  {
+    number: 3,
+    title: `Какой синтаксис используется для объявления типов переменных в TypeScript?`,
+    shortAnswer: '',
+    longAnswer: `<span>В TypeScript синтаксис для объявления типов переменных состоит из указания типа переменной после двоеточия :. Пример базового синтаксиса:</span><br>`,
+    frequency: 4,
+    language: "typescript",
+    codeExample: `let age: number = 25;
+let name: string = “Alice”;
+let isStudent: boolean = true;
+let numbers: number[] = [1, 2, 3, 4];
+let names: string[] = [“Alice”, “Bob”];
+let person: { name: string; age: number } = { name: “Alice”, age: 25 };
+interface Person {
+name: string;
+age: number;
+}
+let user: Person = { name: “Alice”, age: 25 };`
+  },
+  {
+    number: 4,
+    title: `Что такое interface, как и для чего он используется?`,
+    shortAnswer: '',
+    longAnswer: `<span><b>Interface</b> — это специальная конструкция для определения структуры объектов и классов, позволяющая задавать контракт на тип данных. Интерфейс описывает, какие свойства и методы должны присутствовать у объекта, а также их типы. Это делает код более понятным и позволяет TypeScript проверять типы на этапе компиляции.</span><br>
+    <strong>Основные цели интерфейсов:</strong><br>
+    <span><b>Определение структуры объектов</b> — интерфейсы позволяют задать обязательные свойства и их типы, которые объект должен содержать.</span>
+    <span><b>Строгая типизация</b> — помогает TypeScript проверить, что объект соответствует ожидаемой структуре, что предотвращает ошибки на этапе разработки.</span>
+    <span><b>Упрощение повторного использования</b> — интерфейсы создают стандартные описания объектов, которые можно применять в разных местах кода.</span>
+    <span><b>Гибкость</b> — интерфейсы могут расширять друг друга, позволяя создавать сложные структуры данных.</span>
+    `,
+    frequency: 4,
+    language: "typescript",
+    codeExample: `interface User {
+id: number;
+name: string;
+email?: string; // необязательное свойство
+isActive: boolean;}`
+  },
+  {
+    number: 5,
+    title: `Какую роль выполняют Type , и чем они отличаются от interface?`,
+    shortAnswer: '',
+    longAnswer: `<strong>type</strong><span> — используется для объявления именованных типов, включая объекты, объединения, пересечения, кортежи, функции и примитивные значения. В отличие от interface, type не поддерживает расширение через extends, но может объединять несколько типов с помощью & и |.</span><br>`,
+    frequency: 4,
+    language: "typescript",
+    codeExample: `type User = { id: number; name: string;}
+    
+  //Может быть объединён (union) или пересечён (intersection)
+
+  type Admin = { role: "admin" };
+  type User = { id: number; name: string };
+  type AdminUser = Admin & User; // Пересечение типов
+
+  //Может представлять примитивные значения, функции, массивы, кортежи
+
+  type ID = string | number;
+  type Point = [number, number];
+  type GetUser = (id: number) => User;`
+  },
+  {
+    number: 6,
+    title: `Как работают Union и Intersection типы?`,
+    shortAnswer: '',
+    longAnswer: `<span><b>Union</b> типы позволяют переменной принимать значения нескольких разных типов. Они обозначаются вертикальной чертой | и означают, что переменная может быть либо одного, либо другого типа.</span>
+    <span><b>Применение:</b> Используются, когда значение может быть нескольких типов и нужно предусмотреть работу с каждым из них.</span><br>
+    <span><b>Intersection</b> типы позволяют создавать типы, которые объединяют свойства нескольких типов. Они обозначаются амперсандом & и означают, что переменная должна содержать свойства всех объединённых типов.</span>
+    <span><b>Применение:</b> Используются, когда объект должен обладать характеристиками нескольких типов одновременно.</span>`,
+    frequency: 4,
+    language: "typescript",
+    codeExample: `interface Person {
+name: string;
+age: number;
+}
+interface Employee {
+companyId: string;
+}
+type PersonEmployee = Person & Employee;
+const worker: PersonEmployee = {
+name: “Alice”,
+age: 30,
+companyId: “XYZ-123”,
+};`
+  },
+  {
+    number: 7,
+    title: `Что такое Generics, и как они помогают улучшить типизацию?`,
+    shortAnswer: '',
+    longAnswer: `<span><b>Generics в TypeScript</b> это способ создания универсальных компонентов, которые могут работать с различными типами данных, сохраняя строгую типизацию. Они позволяют писать обобщённые функции, классы и интерфейсы, которые автоматически подстраиваются под типы, с которыми они работают. Это помогает повысить гибкость кода и сделать его более безопасным, так как при использовании Generics TypeScript проверяет соответствие типов на каждом этапе работы.</span><br>
+    <span><b>Как работают Generics:</b> Generics представляют собой параметры типов, которые обозначаются через символы, такие как <code>&lt;T&gt;</code>, <code>&lt;U&gt;</code>, <code>&lt;K, V&gt;</code> и другие. В функции, классе или интерфейсе можно использовать эти параметры для указания типов переменных, аргументов и возвращаемых значений.</span><br>
+    <span><b>Преимущества Generics:</b> позволяют использовать одну и ту же функцию или класс для разных типов данных. Безопасность типов: сохраняют информацию о типе, поэтому TypeScript может проверять типы на этапе компиляции. Читабельность и переиспользуемость кода: создаются универсальные компоненты, которые легко адаптировать под разные типы данных.</span>`,
+    frequency: 4,
+    language: "typescript",
+    codeExample: `// Пример 1: Дженерик-функция
+  function identity<T>(value: T): T {
+  return value;
+}
+
+  const numberValue = identity<number>(42);  // number
+  const stringValue = identity<string>("Hello");  // string
+  
+  //Пример 2: Дженерик-интерфейс
+
+  interface Box<T> {
+  content: T;
+}
+
+  const numberBox: Box<number> = { content: 100 };
+  const stringBox: Box<string> = { content: "TypeScript" };
+
+  //Пример 3: Дженерик-класс
+
+ class Storage<T> {
+  private items: T[] = [];
+
+  addItem(item: T) {
+    this.items.push(item);
+  }
+
+  getItems(): T[] {
+    return this.items;
+  }
+}
+
+const numberStorage = new Storage<number>();
+numberStorage.addItem(5);
+numberStorage.addItem(10);
+console.log(numberStorage.getItems()); // [5, 10]`
+  },
+  {
+    number: 8,
+    title: `Как работают Union и Intersection типы?`,
+    shortAnswer: '',
+    longAnswer: `<span><b>Union</b> типы позволяют переменной принимать значения нескольких разных типов. Они обозначаются вертикальной чертой | и означают, что переменная может быть либо одного, либо другого типа.</span>
+    <span><b>Применение:</b> Используются, когда значение может быть нескольких типов и нужно предусмотреть работу с каждым из них.</span><br>
+    <span><b>Intersection</b> типы позволяют создавать типы, которые объединяют свойства нескольких типов. Они обозначаются амперсандом & и означают, что переменная должна содержать свойства всех объединённых типов.</span>
+    <span><b>Применение:</b> Используются, когда объект должен обладать характеристиками нескольких типов одновременно.</span>`,
+    frequency: 4,
+    language: "typescript",
+    codeExample: `interface Person {
+name: string;
+age: number;
+}
+interface Employee {
+companyId: string;
+}
+type PersonEmployee = Person & Employee;
+const worker: PersonEmployee = {
+name: “Alice”,
+age: 30,
+companyId: “XYZ-123”,
+};`
+  },
+  {
+    number: 9,
+    title: `Основные Utility Types в TypeScript`,
+    shortAnswer: '',
+    longAnswer: `<span><b>Partial<code>&lt;T&gt;</b></code> – делает все свойства объекта необязательными.</span><br>
+    <span><b>Required<code>&lt;T&gt;</b></code> – делает все свойства обязательными.</span><br>
+    <span><b>Readonly<code>&lt;T&gt;</b></code> –  делает все свойства только для чтения.</span><br>
+    <span><b>Pick<code>&lt;T, K&gt;</b></code> – выбирает только указанные свойства из типа.</span><br>
+    <span><b>Omit<code>&lt;T, K&gt;</b></code> – исключает указанные свойства.</span><br>
+    <span><b>Record<code>&lt;K, T&gt;</b></code> – создаёт объект с ключами типа K и значениями типа T.</span><br>
+    <span><b>Exclude<code>&lt;T, U&gt;</b></code> – удаляет из T те типы, которые есть в U.</span><br>
+    <span><b>Extract<code>&lt;T, U&gt;</b></code> – ыбирает только те типы, которые есть в U.</span><br>
+    <span><b>NonNullable<code>&lt;T&gt;</b></code> – удаляет null и undefined.</span><br>
+    <span><b>ReturnType<code>&lt;T&gt;</b></code> – извлекает тип возвращаемого значения из функции.</span>
+    `,
+    frequency: 4,
+    language: "typescript",
+  },
+
+
+
+];
